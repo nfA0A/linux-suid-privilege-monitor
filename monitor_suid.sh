@@ -13,7 +13,7 @@ echo "------------------------------------------------------------------"
 # Cria a baseline inicial se ela não existir
 if [ ! -f "${BASE_CONFIAVEL}" ]; then
         find "${DIRETORIO_AUDITORIA}" -perm -4000 2>/dev/null | sort > "${BASE_CONFIAVEL}"
-        echo "🟢 Baseline de confiança criada com sucesso!"
+        echo "Baseline de confiança criada com sucesso!"
 fi
 
 while true; do
@@ -31,10 +31,10 @@ while true; do
                 # Purifica a string para mostrar apenas o caminho do ficheiro
                 BINARIO_MALICIOSO=$(echo "${NOVOS_SUID}" | awk '{print $2}')
 
-                echo "🚨 ALERTA CRÍTICO: Novo binário SUID detetado: ${BINARIO_MALICIOSO}"
+                echo "ALERTA CRÍTICO: Novo binário SUID detetado: ${BINARIO_MALICIOSO}"
 
                 # Grava no log forense para auditoria de IT
-                echo "[${DATA_HORA}] 🚨 VIOLAÇÃO DE PRIVILÉGIO DETETADA!" >> "${ARQUIVO_LOG}"
+                echo "[${DATA_HORA}] VIOLAÇÃO DE PRIVILÉGIO DETETADA!" >> "${ARQUIVO_LOG}"
                 echo "Ficheiro modificado/criado: ${BINARIO_MALICIOSO}" >> "${ARQUIVO_LOG}"
                 echo "Este binário agora pode rodar como ROOT por qualquer utilizador!" >> "${ARQUIVO_LOG}"
                 echo "--------------------------------------------------" >> "${ARQUIVO_LOG}"
