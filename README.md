@@ -32,16 +32,16 @@ Para validar a mecânica de detecção em tempo real e simular um cenário de de
 
 Em uma aba do terminal, inicie o monitor com privilégios administrativos:
 
-Bash
+Bash:  
 sudo ./monitor_suid.sh
 Em outra aba do terminal, simule a criação de uma backdoor criando uma cópia de um binário legítimo em /usr/bin e aplicando a permissão SUID:
 
-Bash
+Bash:  
 sudo cp /usr/bin/sleep /usr/bin/backdoor_teste
 sudo chmod +s /usr/bin/backdoor_teste
 Validação: Acompanhe o terminal do monitor (monitor_suid.sh). No próximo ciclo de execução, a criação da backdoor com bit SUID será identificada e um alerta crítico será gerado no terminal e registrado em auditoria_privilegios.log.
 
 Limpeza do ambiente: Após validar o alerta, remova o arquivo de teste:
 
-Bash
+Bash:  
 sudo rm -f /usr/bin/backdoor_teste
