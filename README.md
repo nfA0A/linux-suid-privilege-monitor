@@ -26,8 +26,9 @@ linux-suid-privilege-monitor/
 ├── Attack-engineering.md # Relatório Técnico de Engenharia de Ataque
 ├── monitor_suid.sh       # Código-fonte limpo e automatizado da ferramenta
 └── README.md             # Relatório Técnico de Engenharia de Segurança
+```
 1.4 Validação Prática (Lab de Testes)
-Para validar a mecânica de detecção em tempo real e simular um cenário de desvio de baseline em ambiente controlado:
+Para validar a mecânica de detecção em tempo real e simular um cenário de desvio de baseline em ambiente controlled:
 
 Em uma aba do terminal, inicie o monitor com privilégios administrativos:
 
