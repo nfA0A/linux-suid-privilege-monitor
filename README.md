@@ -1,4 +1,3 @@
-Markdown
 # Linux SUID Privilege Monitor (linux-suid-privilege-monitor)
 
 Este repositório contém uma ferramenta de automação defensiva desenvolvida em Bash Script voltada para a auditoria contínua e monitoramento em tempo real do sistema de arquivos Linux. O objetivo principal do projeto é mitigar vetores de ataque associados a desvios de baseline e persistências silenciosas via SUID.
