@@ -1,4 +1,4 @@
-1. O Isolamento de Processos (A Regra do Kernel)
+1. O Isolamento de Processos (A Regra do Kernel)  
 O Kernel do Linux trabalha com processos isolados.
 
 Se você rodar o /usr/bin/backdoor_teste (com SUID ativo), o Kernel vai criar um processo na memória (digamos, com o PID 4520) e dará a esse processo específico o poder de root (UID 0).
